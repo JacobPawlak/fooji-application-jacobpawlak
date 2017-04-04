@@ -1,0 +1,440 @@
+/*
+Jacob Pawlak
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+//html styles
+html {
+	height: 100%;
+	font-weight: 100;
+	padding: 0;
+	margin: 0;
+	font-family: 'Muli', sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	box-sizing: border-box;
+
+}
+
+//fun gradient background
+.gradient {
+	background: #607395; /* if all else fails... */
+  	background: -webkit-linear-gradient(left top, #384D8B, #607395, #607195 ); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(bottom right, #384D8B, #607395, #607195 ); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(bottom right, #384D8B, #607395, #607195 ); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(to bottom right, #384D8B, #607395, #607195 ); /* Standard syntax */
+}
+
+//body styling
+body {
+	margin: 0;
+	overflow: hidden;
+}
+
+//on hover, the links should become less opaque and transition
+a:hover{
+	opacity: .6;
+	-o-transition: 1s;
+	-ms-transition: 1s;
+	-moz-transition: 1s;
+	-webkit-transition: 1s;
+}
+
+//nav bar styles
+#nav-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	max-width: 300px;
+	height: 100px;
+	@media screen and (max-width: 415px) {
+		max-width: 95%;
+		height: 70px;
+		margin: auto;
+	}
+	@media screen and (max-width: 321px) {
+		max-width: 95%;
+		height: 50px;
+		margin: auto;
+	}
+}
+
+//styling the individual nav items
+.nav-item {
+	display:inline-block;
+	margin-right: 20px;
+	padding-top: 10px;
+	list-style: none;
+	text-decoration: none;
+	position: relative;
+	width: 30%;
+	img {
+		width: 100%;
+		height: auto;
+		min-height: auto;
+		min-width: 30px;
+	}
+}
+
+//the body, incuding the button
+#body-part {
+	text-align: center;
+	padding-top: 110px;
+	margin: auto;
+	position: relative;
+	height: 400px;
+	.button-wrapper { //the button wrapper
+		padding-top: 30px;
+		position:relative;
+		display:inline-block;
+		.popup { //here is the little dialog box that pops up
+		    position: absolute;
+		    opacity: 1;
+		    top: -10px;
+		    right: 40px;
+		    background: #ffffff; /* if all else fails... */
+		  	background: -webkit-linear-gradient(left top, #ffffff, #A9A9A9 ); /* For Safari 5.1 to 6.0 */
+		  	background: -o-linear-gradient(bottom right, #ffffff, #A9A9A9 ); /* For Opera 11.1 to 12.0 */
+		  	background: -moz-linear-gradient(bottom right, #ffffff, #A9A9A9 ); /* For Firefox 3.6 to 15 */
+		  	background: linear-gradient(to bottom right, #ffffff, #A9A9A9 ); /* Standard syntax */
+		    padding: 8px 12px;
+		    border-radius: 4px;
+		    font-size: 14px;
+		    color: #607395;
+		    &::before { //the little tail for the box
+		    	content:"";
+		    	opacity: 1;
+		    	z-index: -1;
+		    	height:15px;
+		    	width:15px;
+		    	background: #ffffff; /* if all else fails... */
+			  	background: -webkit-linear-gradient(left top, #ffffff, #A9A9A9 ); /* For Safari 5.1 to 6.0 */
+			  	background: -o-linear-gradient(bottom right, #ffffff, #A9A9A9 ); /* For Opera 11.1 to 12.0 */
+			  	background: -moz-linear-gradient(bottom right, #ffffff, #A9A9A9 ); /* For Firefox 3.6 to 15 */
+			  	background: linear-gradient(to bottom right, #ffffff, #A9A9A9 ); /* Standard syntax */
+		    	-ms-transform: rotate(45deg); /* IE 9 */
+    			-webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    			transform: rotate(45deg);
+    			left:47px;
+    			top:24px;
+    			position:absolute;
+		    }
+		}
+	}
+}
+
+//the body list has the twitter bird, plus, and the pizza in it
+#body-list {
+	text-align: center;
+	height: 100px;
+	max-width: 225px;
+	width: 50%;
+	padding-bottom: 15px;
+	margin: auto;
+	@media screen and (max-width: 415px) {
+		#body-list {
+			padding-bottom: 0px;
+			width: 70%;
+			margin: auto;
+		}
+	}
+	@media screen and (max-width: 321px) {
+		#body-list {
+			margin-top: -10px; 
+		}
+	}
+}
+
+//styling the individual items (imgs)
+.body-list-item {
+	display:inline-block;
+	margin-right: 20px;
+	padding-top: 20px;
+	margin-left: -15px;
+	list-style: none;
+	text-decoration: none;
+	position: relative;
+	width:30%;
+	img {
+		width:100%;
+		height:auto;
+		min-width: 30px;
+		min-height: auto;
+	}
+}
+
+//the styles for the footer, kinda basic, but the last-of-type helped me get around some responsiveness issues I had
+#footer {
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin-bottom: -15px;
+	@media screen and (max-width: 415px) {
+		#footer-list {
+			height: 150px;
+			background-color: #ffffff;
+			display: block;
+			text-align: center;
+		}
+		#terms-privacy {
+			width: 95%;
+			margin: auto;
+		}
+		.footer-item {
+			width: 95%;
+			margin: auto;
+			img {
+				width: 80px;
+				height: auto;
+				margin-top: 20px;
+				margin-bottom: -15px;
+			}
+		}
+	}
+	@media screen and (max-width: 321px) {
+		#footer-list {
+			height: 125px;
+			background-color: #ffffff;
+			display: block;
+			text-align: center;
+			vertical-align: middle;
+		}
+		#terms-privacy {
+			width: 95%;
+			margin: auto;
+		}
+		.footer-item {
+			width: 95%;
+			margin: auto;
+			img {
+				width: 80px;
+				height: auto;
+				margin-top: 20px;
+				margin-bottom: -15px;
+			}
+		}
+		li:last-of-type {
+			margin-top: 50px;
+		}
+	}
+}
+
+//there might be some duplicated code down in this next block, but that is because I changed how I was doing the 
+//footer about 80% of my way through this project
+#footer-list {
+	height: 35px;
+	background-color: #ffffff;
+	position:relative;
+	li:last-of-type { //using last-of-type to grab the "terms | privacy" item
+		font-size: 13px;
+		color: #BDBDBD;
+		position:absolute;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+		margin:0;
+	}
+	@media screen and (max-width:750px) {
+		li:last-of-type {
+			left:auto;
+			-webkit-transform: none;
+			transform: none;
+			right:10px;
+		}
+	}
+	@media screen and (max-width: 415px) {
+		.footer-item {
+			width: 91%;
+			margin: auto;
+		}
+		li:last-of-type {
+			margin-top: 85px;
+		}
+	}
+	@media screen and (max-width:321px) {
+		.footer-item {
+			width: 91%;
+			margin: auto;
+		}
+		li:last-of-type {
+			margin-top: 85px;
+		}
+	}
+}
+
+//some extra sytling for the footer items themselves
+.footer-item {
+	float: left;
+	margin-right: 15px;
+	padding: 1px;
+	list-style: none;
+	text-decoration: none;
+	position: relative;
+}
+
+//grabing the black fooji logo for styling
+.footer-item:first-of-type {
+	margin-left: -30px;
+	margin-top: 5px;
+}
+
+//keeping the terms | privacy part in the margin of the footer
+#terms-privacy {
+	width: 100px;
+	top: -10px;
+}
+
+//basic styling for the lists
+ul {
+	list-style-type: none;
+	vertical-align: middle;
+	display: flex;
+	align-items: center;
+}
+
+
+//the following parts are just some styles for the images, if they needed any, to help with the responsiveness 
+#small-promo-box:hover {
+	opacity: .6;
+}
+
+#sep-bar {
+	max-height: 50px;
+}
+
+#fooji-pizza {
+	//max-height: 60px;
+	//max-width: 60px;
+	//height: 20px;
+	//width: 20px;
+}
+
+#fooji-twitter {
+	//height: 60px;
+	//width: 60px;
+}
+
+#small-promo-box {
+	//height: 30px;
+	//width: 100px;
+}
+
+#large-promo-box {
+	height: 203px;
+	max-width: 450px;
+	width:80%;
+
+	@media screen and (max-width: 415px) {
+		width: 70%;
+		max-width: 400px;
+		height: 150px;
+		margin-bottom: -20px;
+	}
+
+	@media screen and (max-width: 321px) {
+		width: 70%;
+		max-width: 200px;
+		height: 100px;
+	}
+}
+
+#plus {
+	max-width: 25px;
+	height: auto;
+	width: 100%;
+}
+
+//here is the styling for the button, I made the effects on it similar to the other a tags, but this one has just a bit more... flair?
+#fun-button {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 15px;
+	padding-right: 15px;
+	display: inline-block;
+	border: none;
+	margin-top: 10px;
+	color: #ffffff;
+	background-color: #7C88E7;
+	border-radius: 4px;
+	font-size: 15px;
+	font-family: 'Muli';
+	font-weight: lighter;
+}
+
+//here's that 'flair' I was talking about..
+#fun-button:hover {
+	cursor: pointer;
+	background-color: #ffffff;
+	color: #7C88E7;
+	-o-transition: 1s;
+	-ms-transition: 1s;
+	-moz-transition: 1s;
+	-webkit-transition: 1s;
+	opacity: 1.2;
+}
+
+#promo-rules {
+	color: #ffffff;
+	font-family: 'Muli';
+	font-size: 13px;
+	margin-top: 13px;
+}
+
+#promo-rules-a {
+	text-decoration: none;
+}
+
+#promo-rules:hover {
+	opacity: .6;
+	-o-transition: 1s;
+	-ms-transition: 1s;
+	-moz-transition: 1s;
+	-webkit-transition: 1s;
+}
+
+#fooji-logo-black {
+	width: 60px;
+	height: 35px;
+}
+
+#contact-a {
+	color: #BDBDBD;
+	font-size: 13px;
+	text-decoration: none;
+}
+
+#contact:hover {
+	color: #696969;
+	opacity: .8;
+	-o-transition: 1s;
+	-ms-transition: 1s;
+	-moz-transition: 1s;
+	-webkit-transition: 1s;
+}
+
+.underlined{
+	text-decoration: underline;
+	color: #BDBDBD;
+}
+
+#terms-a:hover {
+	color: #696969;
+	opacity: .8;
+	-o-transition: 1s;
+	-ms-transition: 1s;
+	-moz-transition: 1s;
+	-webkit-transition: 1s;
+}
+
+#privacy-a:hover {
+	color: #696969;
+	opacity: .8;
+	-o-transition: 1s;
+	-ms-transition: 1s;
+	-moz-transition: 1s;
+	-webkit-transition: 1s;
+}
