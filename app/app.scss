@@ -79,6 +79,30 @@ a:hover{
 	}
 }
 
+.modal-dialog{
+	min-width: 30%;
+	max-width: 50%;
+	//min-width: 40px;
+	padding: 12px;
+	margin: auto;
+	color: #F5F5F5;
+	.modal-content{
+		background: #607395; /* if all else fails... */
+	  	background: -webkit-linear-gradient(left top, #384D8B, #607395, #607195 ); /* For Safari 5.1 to 6.0 */
+	  	background: -o-linear-gradient(bottom right, #384D8B, #607395, #607195 ); /* For Opera 11.1 to 12.0 */
+	  	background: -moz-linear-gradient(bottom right, #384D8B, #607395, #607195 ); /* For Firefox 3.6 to 15 */
+	  	background: linear-gradient(to bottom right, #384D8B, #607395, #607195 ); /* Standard syntax */
+	}
+	border-radius: 4px;
+	margin-top: 140px;
+	height:40px;
+}
+
+
+.hide {
+	display: none;
+}
+
 //the body, incuding the button
 #body-part {
 	text-align: center;
@@ -90,39 +114,6 @@ a:hover{
 		padding-top: 30px;
 		position:relative;
 		display:inline-block;
-		.popup { //here is the little dialog box that pops up
-		    position: absolute;
-		    opacity: 1;
-		    top: -10px;
-		    right: 40px;
-		    background: #ffffff; /* if all else fails... */
-		  	background: -webkit-linear-gradient(left top, #ffffff, #A9A9A9 ); /* For Safari 5.1 to 6.0 */
-		  	background: -o-linear-gradient(bottom right, #ffffff, #A9A9A9 ); /* For Opera 11.1 to 12.0 */
-		  	background: -moz-linear-gradient(bottom right, #ffffff, #A9A9A9 ); /* For Firefox 3.6 to 15 */
-		  	background: linear-gradient(to bottom right, #ffffff, #A9A9A9 ); /* Standard syntax */
-		    padding: 8px 12px;
-		    border-radius: 4px;
-		    font-size: 14px;
-		    color: #607395;
-		    &::before { //the little tail for the box
-		    	content:"";
-		    	opacity: 1;
-		    	z-index: -1;
-		    	height:15px;
-		    	width:15px;
-		    	background: #ffffff; /* if all else fails... */
-			  	background: -webkit-linear-gradient(left top, #ffffff, #A9A9A9 ); /* For Safari 5.1 to 6.0 */
-			  	background: -o-linear-gradient(bottom right, #ffffff, #A9A9A9 ); /* For Opera 11.1 to 12.0 */
-			  	background: -moz-linear-gradient(bottom right, #ffffff, #A9A9A9 ); /* For Firefox 3.6 to 15 */
-			  	background: linear-gradient(to bottom right, #ffffff, #A9A9A9 ); /* Standard syntax */
-		    	-ms-transform: rotate(45deg); /* IE 9 */
-    			-webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-    			transform: rotate(45deg);
-    			left:47px;
-    			top:24px;
-    			position:absolute;
-		    }
-		}
 	}
 }
 
@@ -191,7 +182,7 @@ a:hover{
 				width: 80px;
 				height: auto;
 				margin-top: 20px;
-				margin-bottom: -15px;
+				//margin-bottom: -15px;
 			}
 		}
 	}
@@ -214,7 +205,7 @@ a:hover{
 				width: 80px;
 				height: auto;
 				margin-top: 20px;
-				margin-bottom: -15px;
+				margin-bottom: 5px;
 			}
 		}
 		li:last-of-type {
@@ -274,6 +265,9 @@ a:hover{
 	list-style: none;
 	text-decoration: none;
 	position: relative;
+	img{
+		margin-bottom: 10px;
+	}
 }
 
 //grabing the black fooji logo for styling

@@ -4,12 +4,13 @@
 
 <head>
 	<!-- Im going to include some basic stuff here just to cover some bases -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="../app.css" type="text/css" >
 	<title>Jacob Pawlak - Fooji App</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet"> <!-- <- Got that really pretty font in here -->
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet"> <!-- <- Got that really pretty font in here -->	
 	<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type='text/javascript' src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="script.js"></script> 
@@ -46,8 +47,19 @@
 					<li class='body-list-item'><a href="https://fooji.co/index.html#!/" target='blank'><img id='fooji-pizza' src="Imgs/fooji-pizza.svg"></a></li>
 				</ul>
 				<!-- Fun button -->
-				<div class="button-wrapper">
-					<button type='button' id='fun-button'>get started with Twitter</button>
+				<div class="button-wrapper" data-toggle="modal" data-target="#popup">
+					<button type='button' class="btn btn-info btn-lg" id='fun-button'>get started with Twitter</button>
+				</div>
+
+				<!-- Here is the dialog box, it should fade in and cloud the background -->
+				<div id='popup' class='modal fade'>
+					<div class='modal-dialog'>
+						<div class='modal-content'>
+							<div class='modal-body'>
+								<strong>You clicked it!</strong>
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<!-- Promotional rules line, i dont know if it is supposed to be a link, but to showcase some 'sweet' transitions, i made it a link and it just points back to the top -->
