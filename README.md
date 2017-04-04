@@ -1,9 +1,11 @@
 # Brunch app
 
-Jacob Pawlak
-April 4th, 2017
-Fooji Application - Frontend Developer
-gofooji
+### Jacob Pawlak
+### April 4th, 2017
+### Fooji Application - Frontend Developer
+### gofooji
+
+### So there is a slight dicrepancy in my git push, it has ryan shah (ryan9...) as having committed some files, but please be assured he did not, all of the files are mine, he was just the last person to use git on my computer and I forgot to set my user.name and email before submitting. Sorry! 
 
 This is a HTML5 application, built with [Brunch](http://brunch.io).
 
